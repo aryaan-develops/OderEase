@@ -42,17 +42,42 @@ export default function DineTablePage() {
     setOrderItems((prevItems) => prevItems.filter((item) => item.menuItem.id !== itemId));
   };
 
-  const handlePlaceOrder = () => {
-    // Here you would typically send the order to the backend API POST /api/order
-    toast({
-      title: "✅ Order Placed Successfully!",
-      description: `Your order for table ${tableNumber} has been sent to the kitchen.`,
-      variant: 'default',
-      duration: 5000,
-    });
-    // Reset state after placing order
-    setOrderItems([]);
-    setTableNumber('');
+  const handlePlaceOrder = async () => {
+    const total = orderItems.reduce((acc, item) => acc + item.menuItem.price * item.quantity, 0);
+    try {
+      const response = await fetch('/api/order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          tableNumber,
+          items: orderItems,
+          total,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to place order');
+      }
+
+      toast({
+        title: "✅ Order Placed Successfully!",
+        description: `Your order for table ${tableNumber} has been sent to the kitchen.`,
+        variant: 'default',
+        duration: 5000,
+      });
+      // Reset state after placing order
+      setOrderItems([]);
+      setTableNumber('');
+    } catch (error) {
+      console.error('Order placement failed:', error);
+      toast({
+        title: 'Error Placing Order',
+        description: 'There was a problem submitting your order. Please try again.',
+        variant: 'destructive',
+      });
+    }
   };
 
   return (
