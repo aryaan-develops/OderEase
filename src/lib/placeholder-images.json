@@ -1,3 +1,17 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {"id": "appetizer1", "description": "Bruschetta", "imageUrl": "https://picsum.photos/seed/101/600/400", "imageHint": "bruschetta bread"},
+    {"id": "appetizer2", "description": "Stuffed Mushrooms", "imageUrl": "https://picsum.photos/seed/102/600/400", "imageHint": "stuffed mushrooms"},
+    {"id": "appetizer3", "description": "Garlic Bread", "imageUrl": "https://picsum.photos/seed/103/600/400", "imageHint": "garlic bread"},
+    {"id": "main1", "description": "Spaghetti Carbonara", "imageUrl": "https://picsum.photos/seed/201/600/400", "imageHint": "spaghetti carbonara"},
+    {"id": "main2", "description": "Margherita Pizza", "imageUrl": "https://picsum.photos/seed/202/600/400", "imageHint": "margherita pizza"},
+    {"id": "main3", "description": "Grilled Salmon", "imageUrl": "https://picsum.photos/seed/203/600/400", "imageHint": "grilled salmon"},
+    {"id": "main4", "description": "Chicken Parmesan", "imageUrl": "https://picsum.photos/seed/204/600/400", "imageHint": "chicken parmesan"},
+    {"id": "dessert1", "description": "Tiramisu", "imageUrl": "https://picsum.photos/seed/301/600/400", "imageHint": "tiramisu slice"},
+    {"id": "dessert2", "description": "Cheesecake", "imageUrl": "https://picsum.photos/seed/302/600/400", "imageHint": "cheesecake slice"},
+    {"id": "dessert3", "description": "Chocolate Lava Cake", "imageUrl": "https://picsum.photos/seed/303/600/400", "imageHint": "lava cake"},
+    {"id": "drink1", "description": "Mineral Water", "imageUrl": "https://picsum.photos/seed/401/600/400", "imageHint": "water bottle"},
+    {"id": "drink2", "description": "Soft Drink", "imageUrl": "https://picsum.photos/seed/402/600/400", "imageHint": "soda glass"},
+    {"id": "drink3", "description": "House Wine", "imageUrl": "https://picsum.photos/seed/403/600/400", "imageHint": "wine glass"}
+  ]
 }
